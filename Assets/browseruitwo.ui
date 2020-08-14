@@ -40,11 +40,17 @@
         <property name="text">
          <string>HEADER</string>
         </property>
+        <property name="scaledContents">
+         <bool>false</bool>
+        </property>
         <property name="alignment">
          <set>Qt::AlignCenter</set>
         </property>
         <property name="wordWrap">
          <bool>false</bool>
+        </property>
+        <property name="margin">
+         <number>0</number>
         </property>
        </widget>
       </item>
@@ -60,98 +66,115 @@
         <widget class="QWidget" name="page">
          <layout class="QVBoxLayout" name="verticalLayout_5">
           <item>
-           <layout class="QGridLayout" name="gridLayout">
-            <item row="2" column="0">
-             <widget class="QLabel" name="label_2">
-              <property name="maximumSize">
+           <layout class="QHBoxLayout" name="horizontalLayout">
+            <item>
+             <layout class="QVBoxLayout" name="verticalLayout_6">
+              <item>
+               <widget class="QLabel" name="lbl_bundleImg">
+                <property name="minimumSize">
+                 <size>
+                  <width>0</width>
+                  <height>200</height>
+                 </size>
+                </property>
+                <property name="text">
+                 <string>Click Load Package to Start</string>
+                </property>
+                <property name="scaledContents">
+                 <bool>true</bool>
+                </property>
+                <property name="alignment">
+                 <set>Qt::AlignCenter</set>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <spacer name="verticalSpacer">
+                <property name="orientation">
+                 <enum>Qt::Vertical</enum>
+                </property>
+                <property name="sizeHint" stdset="0">
+                 <size>
+                  <width>20</width>
+                  <height>40</height>
+                 </size>
+                </property>
+               </spacer>
+              </item>
+              <item>
+               <widget class="QPushButton" name="btn_load">
+                <property name="minimumSize">
+                 <size>
+                  <width>250</width>
+                  <height>0</height>
+                 </size>
+                </property>
+                <property name="text">
+                 <string>Load Package</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <spacer name="verticalSpacer_2">
+                <property name="orientation">
+                 <enum>Qt::Vertical</enum>
+                </property>
+                <property name="sizeHint" stdset="0">
+                 <size>
+                  <width>20</width>
+                  <height>40</height>
+                 </size>
+                </property>
+               </spacer>
+              </item>
+             </layout>
+            </item>
+            <item>
+             <spacer name="horizontalSpacer">
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
                <size>
-                <width>100</width>
-                <height>100</height>
+                <width>10</width>
+                <height>10</height>
                </size>
               </property>
-              <property name="text">
-               <string>TextLabel</string>
-              </property>
-             </widget>
+             </spacer>
             </item>
-            <item row="0" column="0">
-             <widget class="QLabel" name="label_3">
-              <property name="text">
-               <string>TextLabel</string>
-              </property>
-             </widget>
-            </item>
-            <item row="1" column="1">
-             <widget class="QLabel" name="label_5">
-              <property name="text">
-               <string>TextLabel</string>
-              </property>
-             </widget>
-            </item>
-            <item row="1" column="0">
-             <widget class="QLabel" name="label">
+            <item>
+             <widget class="QTableWidget" name="tableWidget_2">
               <property name="minimumSize">
                <size>
-                <width>50</width>
-                <height>50</height>
+                <width>330</width>
+                <height>0</height>
                </size>
               </property>
-              <property name="maximumSize">
+              <property name="sizeAdjustPolicy">
+               <enum>QAbstractScrollArea::AdjustToContents</enum>
+              </property>
+              <property name="editTriggers">
+               <set>QAbstractItemView::NoEditTriggers</set>
+              </property>
+              <property name="iconSize">
                <size>
-                <width>100</width>
-                <height>100</height>
+                <width>150</width>
+                <height>150</height>
                </size>
               </property>
-              <property name="text">
-               <string>TextLabel</string>
+              <property name="columnCount">
+               <number>1</number>
               </property>
-             </widget>
-            </item>
-            <item row="0" column="1">
-             <widget class="QLabel" name="label_4">
-              <property name="maximumSize">
-               <size>
-                <width>100</width>
-                <height>100</height>
-               </size>
-              </property>
-              <property name="text">
-               <string>TextLabel</string>
-              </property>
-             </widget>
-            </item>
-            <item row="2" column="1">
-             <widget class="QLabel" name="label_6">
-              <property name="text">
-               <string>TextLabel</string>
-              </property>
-             </widget>
-            </item>
-            <item row="0" column="2">
-             <widget class="QLabel" name="label_7">
-              <property name="maximumSize">
-               <size>
-                <width>100</width>
-                <height>16777215</height>
-               </size>
-              </property>
-              <property name="text">
-               <string>TextLabel</string>
-              </property>
-             </widget>
-            </item>
-            <item row="1" column="2">
-             <widget class="QLabel" name="label_8">
-              <property name="text">
-               <string>TextLabel</string>
-              </property>
-             </widget>
-            </item>
-            <item row="2" column="2">
-             <widget class="QLabel" name="label_9">
-              <property name="text">
-               <string>TextLabel</string>
-              </property>
+              <attribute name="horizontalHeaderVisible">
+               <bool>false</bool>
+              </attribute>
+              <attribute name="verticalHeaderVisible">
+               <bool>false</bool>
+              </attribute>
+              <attribute name="verticalHeaderDefaultSectionSize">
+               <number>75</number>
+              </attribute>
+              <column/>
              </widget>
             </item>
            </layout>
@@ -206,6 +229,13 @@
               </attribute>
               <column/>
               <column/>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="btn_return">
+              <property name="text">
+               <string>Back</string>
+              </property>
              </widget>
             </item>
            </layout>
