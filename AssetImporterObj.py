@@ -87,6 +87,8 @@ class MyWindow(QtWidgets.QMainWindow):
         self.mw.stackedWidget.setCurrentIndex(0)
                 
     def loadMain(self):
+        #Clear Table First
+        self.mw.tableWidget_2.setRowCount(0)
         #Load Dir File
         with open((locPath + "\Dirs.txt"),'r') as dirsF:
             #Read Lines into List.
